@@ -1,0 +1,25 @@
+﻿@model BadDinosaurCodeTest.Web.Models.EditDinosaurViewModel
+@{
+    ViewBag.Title = Model.Name;
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>@ViewBag.Title</h1>
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(x => x.Id)
+                <div class="form-group">
+                    @Html.LabelFor(x => x.Name)
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+}

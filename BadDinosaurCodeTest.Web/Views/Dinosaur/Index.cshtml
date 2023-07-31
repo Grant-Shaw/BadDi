@@ -1,0 +1,31 @@
+﻿@model BadDinosaurCodeTest.Web.Models.DinosaurListViewModel
+@{
+    ViewBag.Title = "Dinosaurs";
+}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h1>Your dinosaurs</h1>
+            <p>Here's all your dinosaurs ordered by name.</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Created on (dd/MM/yyyy)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var dinosaur in Model.Dinosaurs)
+                    {
+                        <tr>
+                            <td><a href="@Url.Action("Edit", "Dinosaur", new { id = dinosaur.Id })">@dinosaur.Name</a></td>
+                            <td>@dinosaur.CreatedOn.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <hr />
+        </div>
+    </div>
+</div>

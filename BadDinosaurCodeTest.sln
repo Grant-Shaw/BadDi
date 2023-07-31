@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30517.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadDinosaurCodeTest.Web", "BadDinosaurCodeTest.Web\BadDinosaurCodeTest.Web.csproj", "{CABCAEF8-31A7-4970-B2E2-09A8EAEED5FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BadDinosaurCodeTest.Data", "BadDinosaurCodeTest.Data\BadDinosaurCodeTest.Data.csproj", "{CF8FDFB1-B63A-4FC5-84C1-9777C3AB2DFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CABCAEF8-31A7-4970-B2E2-09A8EAEED5FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CABCAEF8-31A7-4970-B2E2-09A8EAEED5FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CABCAEF8-31A7-4970-B2E2-09A8EAEED5FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CABCAEF8-31A7-4970-B2E2-09A8EAEED5FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8FDFB1-B63A-4FC5-84C1-9777C3AB2DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8FDFB1-B63A-4FC5-84C1-9777C3AB2DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8FDFB1-B63A-4FC5-84C1-9777C3AB2DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8FDFB1-B63A-4FC5-84C1-9777C3AB2DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C09F2CDA-FAA0-4AFC-B3F0-D4C10AF6901A}
+	EndGlobalSection
+EndGlobal

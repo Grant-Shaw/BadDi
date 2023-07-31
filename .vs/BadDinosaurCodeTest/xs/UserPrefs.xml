@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{CABCAEF8-31A7-4970-B2E2-09A8EAEED5FF}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="BadDinosaurCodeTest" expanded="True" selected="True">
+            <Node name="BadDinosaurCodeTest.Data" expanded="True" />
+            <Node name="BadDinosaurCodeTest.Web" expanded="True">
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.BadDinosaurCodeTest.Web PreferredExecutionTarget="/Applications/Vivaldi.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

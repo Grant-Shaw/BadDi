@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+
+<div class="container my-5 ">
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 mt-5">
+            <h1>Bad Dinosaur Code Test</h1>
+            <p>
+                Welcome to our app made for Dinosaurs who play rugby. It's a pretty simple way to keep track of all the dinosaurs and which teams they play for. We started
+                writing some basic initial functionality but we need your help to complete it!
+            </p>
+            <div class="card">
+                <div class="card-body">
+                    <p>
+                        Here are some challenges for you. Don't worry if you can't get through them all -- do as much as you can, and even pseudo code is better than nothing if you're running out of time. Where properties are missing on the data model, you'll need to add those yourself and run database migrations. It's all using a local SQL database so that should just work, but let us know if you're having issues with your environment. There's also seed data so if the database drops, don't worry about it, it should seed the test data automatically.
+                        Feel free to also add your own flare, or refactor / correct things you think could've been done a little bit better.
+                    </p>
+                    <br />
+                    <h4>
+                        Challenge 1
+                    </h4>
+                    <p>
+                        Display a table of all dinosaurs on the <a href="@Url.Action("Index", "Dinosaur")">index page</a>, ordered by name, and link the dinosaur name to the edit page that's already been implemented.
+                    </p>
+                    <br />
+
+                    <h4>
+                        Challenge 2
+                    </h4>
+                    <p>
+                        Add the ability to select the type of a dinosaur to the Dinosaur edit page and save selected value to the database. There's already an enum for the different types in the Enums folder of the Data project.
+                    </p>
+                    <br />
+
+                    <h4>
+                        Challenge 3
+                    </h4>
+                    <p>
+                        Display the new dinosaur type column in the table on the dinosaur index page so we can see the type of each dinosaur.
+                    </p>
+                    <br />
+
+                    <h4>
+                        Challenge 4
+                    </h4>
+                    <p>
+                        Add the ability to select the team the dinosaur belongs to on the Dinosaur edit page and save the selection to the database.
+                        There are already a couple of teams in the database for you so don't worry about that part. Dinosaurs don't have to be in a team, so make sure you handle that scenario.
+                    </p>
+                    <br />
+
+                    <h4>
+                        Challenge 5
+                    </h4>
+                    <p>
+                        We want to see all teams on the app, and the dinosaurs in each of the teams.
+                        Display a table for each team, showing the dinosaurs in each team (same columns as the dinosaurs index page table), on the <a href="@Url.Action("Index", "Team")">team index page</a>.
+                    </p>
+                    <br />
+
+                    <h4>
+                        Challenge 6
+                    </h4>
+                    <p>
+                        We need more dinosaurs! Extend the 'Edit' method to handle adding a new dinosaur and put a button to do this on the dinosaur index page.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
