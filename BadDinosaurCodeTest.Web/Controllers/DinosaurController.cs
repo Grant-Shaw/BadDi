@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BadDinosaurCodeTest.Web.Models;
 using BadDinosaurCodeTest.Data;
+using BadDinosaurCodeTest.Data.Enums;
 
 namespace BadDinosaurCodeTest.Web.Controllers
 {
@@ -46,7 +47,9 @@ namespace BadDinosaurCodeTest.Web.Controllers
             {
                 Id = dinosaur.Id,
                 Name = dinosaur.Name,
+                DinosaurType = dinosaur.DinosaurType // Assuming the dinosaur already has a type set in the database
             };
+            ViewBag.DinosaurTypes = Enum.GetValues(typeof(DinosaurType)).Cast<DinosaurType>();
             return View(model);
         }
 
@@ -56,6 +59,7 @@ namespace BadDinosaurCodeTest.Web.Controllers
         {
             var dinosaur = _db.Dinosaurs.FirstOrDefault(x => x.Id == model.Id);
             dinosaur.Name = model.Name;
+            dinosaur.DinosaurType = model.DinosaurType;
             await _db.SaveChangesAsync();
             return RedirectToAction("Index", "Dinosaur");
         }

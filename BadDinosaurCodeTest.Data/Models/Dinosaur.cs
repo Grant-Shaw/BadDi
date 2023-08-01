@@ -1,6 +1,5 @@
 using BadDinosaurCodeTest.Data.Enums;
 using System;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BadDinosaurCodeTest.Data.Models
@@ -11,6 +10,8 @@ namespace BadDinosaurCodeTest.Data.Models
         public int Id { get; set; }
 
         public string Name { get; set; }
+
+        public DinosaurType DinosaurType { get; set; }
 
         public DateTime CreatedOn { get; set; }
     }

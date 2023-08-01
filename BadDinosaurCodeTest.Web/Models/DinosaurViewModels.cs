@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using BadDinosaurCodeTest.Data.Enums;
 
 namespace BadDinosaurCodeTest.Web.Models
 {
@@ -19,5 +20,6 @@ namespace BadDinosaurCodeTest.Web.Models
     {
         public int? Id { get; set; }
         public string Name { get; set; }
+        public DinosaurType DinosaurType { get; set; }
     }
 }

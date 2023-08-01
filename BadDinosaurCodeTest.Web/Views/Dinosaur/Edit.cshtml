@@ -11,10 +11,17 @@
             {
                 @Html.AntiForgeryToken()
                 @Html.HiddenFor(x => x.Id)
+
                 <div class="form-group">
                     @Html.LabelFor(x => x.Name)
                     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
                 </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(x => x.DinosaurType)
+                    @Html.DropDownListFor(x => x.DinosaurType, new SelectList(ViewBag.DinosaurTypes, Model.DinosaurType), new { @class = "form-control" })
+                </div>
+
                 <button type="submit" class="btn btn-primary">Save</button>
             }
         </div>
