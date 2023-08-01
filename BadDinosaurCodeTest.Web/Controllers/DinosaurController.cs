@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using BadDinosaurCodeTest.Web.Models;
 using BadDinosaurCodeTest.Data;
 using BadDinosaurCodeTest.Data.Enums;
+using BadDinosaurCodeTest.Web.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BadDinosaurCodeTest.Web.Controllers
 {
@@ -47,7 +44,7 @@ namespace BadDinosaurCodeTest.Web.Controllers
             {
                 Id = dinosaur.Id,
                 Name = dinosaur.Name,
-                DinosaurType = dinosaur.DinosaurType // Assuming the dinosaur already has a type set in the database
+                DinosaurType = dinosaur.DinosaurType 
             };
             ViewBag.DinosaurTypes = Enum.GetValues(typeof(DinosaurType)).Cast<DinosaurType>();
             return View(model);
