@@ -3,6 +3,7 @@ using BadDinosaurCodeTest.Data.Enums;
 using BadDinosaurCodeTest.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,8 +13,10 @@ namespace BadDinosaurCodeTest.Web.Controllers;
 public class DinosaurController : Controller
 {
     private readonly DataContext _db;
-    public DinosaurController(DataContext dataContext)
+    private readonly ILogger<DinosaurController> _logger;
+    public DinosaurController(DataContext dataContext, ILogger<DinosaurController> logger)
     {
+        _logger = logger;
         _db = dataContext;
     }
 
@@ -58,14 +61,35 @@ public class DinosaurController : Controller
     [ValidateAntiForgeryToken]
     public async Task<ActionResult> Edit(EditDinosaurViewModel model)
     {
-        var dinosaur = await _db.Dinosaurs.FirstOrDefaultAsync(x => x.Id == model.Id);
+        try
+        {
+            var dinosaur = await _db.Dinosaurs.FirstOrDefaultAsync(x => x.Id == model.Id);
 
-        if(dinosaur == null) { NotFound(); }
+            if (dinosaur == null)
+            {
+                return NotFound();
+            }
 
-        dinosaur.Name = model.Name;
-        dinosaur.DinosaurType = model.DinosaurType;
-        dinosaur.TeamId = model.TeamId;
-        await _db.SaveChangesAsync();
-        return RedirectToAction("Index", "Dinosaur");
+            if (ModelState.IsValid)
+            {
+                dinosaur.Name = model.Name;
+                dinosaur.DinosaurType = model.DinosaurType;
+                dinosaur.TeamId = model.TeamId;
+                await _db.SaveChangesAsync();
+                return RedirectToAction("Index", "Dinosaur");
+            }
+            else
+            {
+
+                ViewBag.DinosaurTypes = Enum.GetValues(typeof(DinosaurType)).Cast<DinosaurType>();
+                ViewBag.Teams = await _db.Teams.ToListAsync();
+                return View(model);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError("An unexpected error occured {Exception}", ex);
+            return RedirectToAction("Error", "Home");
+        }
     }
 }
