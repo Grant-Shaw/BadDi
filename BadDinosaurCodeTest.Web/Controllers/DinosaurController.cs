@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿using BadDinosaurCodeTest.Data;
 using BadDinosaurCodeTest.Data.Enums;
 using BadDinosaurCodeTest.Web.Models;
@@ -7,15 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-=======
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using BadDinosaurCodeTest.Data;
-using BadDinosaurCodeTest.Data.Enums;
-using BadDinosaurCodeTest.Web.Models;
-using Microsoft.AspNetCore.Mvc;
->>>>>>> 183c0cb373cdf4e480629b4ef6235ac51b743356
 
 namespace BadDinosaurCodeTest.Web.Controllers;
 
@@ -43,22 +33,8 @@ public class DinosaurController : Controller
 
         var model = new DinosaurListViewModel
         {
-<<<<<<< HEAD
             Dinosaurs = dinosaurs
         };
-=======
-            var dinosaur = _db.Dinosaurs.FirstOrDefault(x => x.Id == id);
-            var model = new EditDinosaurViewModel()
-            {
-                Id = dinosaur.Id,
-                Name = dinosaur.Name,
-                DinosaurType = dinosaur.DinosaurType 
-            };
-            ViewBag.DinosaurTypes = Enum.GetValues(typeof(DinosaurType)).Cast<DinosaurType>();
-            return View(model);
-        }
->>>>>>> 183c0cb373cdf4e480629b4ef6235ac51b743356
-
         return View(model);
     }
 
