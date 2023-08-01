@@ -1,15 +1,13 @@
-﻿using BadDinosaurCodeTest.Data;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace BadDinosaurCodeTest.Web.Controllers
+namespace BadDinosaurCodeTest.Web.Controllers;
+
+public class TeamController : Controller
 {
-    public class TeamController : Controller
+    public async Task<ActionResult> Index()
     {
-        public async Task<ActionResult> Index()
-        {
-            // TODO: Get teams.
-            return View();
-        }
+        // TODO: Get teams.
+        return View();
     }
 }

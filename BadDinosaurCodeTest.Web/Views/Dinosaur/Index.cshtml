@@ -12,6 +12,7 @@
                 <thead>
                     <tr>
                         <th>Name</th>
+                        <th>Dinosaur Type</th>
                         <th>Created on (dd/MM/yyyy)</th>
                     </tr>
                 </thead>
@@ -20,6 +21,7 @@
                     {
                         <tr>
                             <td><a href="@Url.Action("Edit", "Dinosaur", new { id = dinosaur.Id })">@dinosaur.Name</a></td>
+                            <td>@dinosaur.DinosaurType</td>
                             <td>@dinosaur.CreatedOn.ToString("dd/MM/yyyy")</td>
                         </tr>
                     }

@@ -14,5 +14,7 @@ namespace BadDinosaurCodeTest.Data.Models
         public DinosaurType DinosaurType { get; set; }
 
         public DateTime CreatedOn { get; set; }
+
+        public int? TeamId { get; set; }
     }
 }
