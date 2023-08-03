@@ -14,14 +14,15 @@ public class DinosaurListItemModel
     public int Id { get; set; }
     public string Name { get; set; }
     public DateTime CreatedOn { get; set; }
+    public DinosaurType? DinosaurType { get; set; }
+    public int? TeamId { get; set; }
 
-    public DinosaurType DinosaurType { get; set; }
 }
 
 public class EditDinosaurViewModel
 {
     public int? Id { get; set; }
     public string Name { get; set; }
-    public DinosaurType DinosaurType { get; set; }
+    public DinosaurType? DinosaurType { get; set; }
     public int? TeamId { get; set; }
 }

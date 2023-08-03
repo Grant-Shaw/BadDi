@@ -11,9 +11,9 @@ public partial class Dinosaur
 
     public string Name { get; set; }
 
-    public DinosaurType DinosaurType { get; set; }
+    public DinosaurType? DinosaurType { get; set; }
 
     public DateTime CreatedOn { get; set; }
 
-    public int? TeamId { get; set; }
+    public int? TeamId { get; set; } //added for future use
 }
